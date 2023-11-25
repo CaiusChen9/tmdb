@@ -157,7 +157,7 @@ func getHTTPClientWithProxy(proxy Proxy) http.Client {
 		}
 	}
 
-	dialer, err := httpProxy.SOCKS5("tcp", fmt.Sprintf("%s:%d", proxy.Host, proxy.Port), auth, httpProxy.Direct)
+	dialer, err := httpProxy.SOCKS5("tcp", fmt.Sprintf("%s:%s", proxy.Host, proxy.Port), auth, httpProxy.Direct)
 	if err != nil {
 		panic(err)
 	}
