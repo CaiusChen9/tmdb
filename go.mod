@@ -1,4 +1,4 @@
-module tmdb
+module github.com/caius8866/tmdb
 
 go 1.21.4
 
