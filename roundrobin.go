@@ -27,7 +27,7 @@ func (r *RoundRobin) GetTicker() int {
 
 	ticker := r.currentTicker
 
-	if r.currentTicker < r.maxAllowed {
+	if r.currentTicker+1 < r.maxAllowed {
 		r.currentTicker = r.currentTicker + 1
 	} else {
 		r.currentTicker = 0
